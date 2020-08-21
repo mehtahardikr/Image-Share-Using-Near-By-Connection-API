@@ -14,5 +14,4 @@ both device connected both can transfer images to each other.
 ![image](https://user-images.githubusercontent.com/12496655/90886976-1ba9bc00-e3d1-11ea-8f15-1ae6c4c9ac08.png)
 ![image](https://user-images.githubusercontent.com/12496655/90887009-2b290500-e3d1-11ea-89a6-d31b815eb74f.png)
 ![image](https://user-images.githubusercontent.com/12496655/90887044-3bd97b00-e3d1-11ea-8dd1-4fd5d2e9f433.png)
-![image](https://user-images.githubusercontent.com/12496655/90887112-662b3880-e3d1-11ea-942a-28d797acd121.png)
 ![image](https://user-images.githubusercontent.com/12496655/90887144-77744500-e3d1-11ea-9518-37caadcd9add.png)
