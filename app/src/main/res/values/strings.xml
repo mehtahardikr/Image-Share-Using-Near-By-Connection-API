@@ -1,0 +1,3 @@
+<resources>
+    <string name="error_missing_permissions">Cannot start without required permissions</string>
+</resources>

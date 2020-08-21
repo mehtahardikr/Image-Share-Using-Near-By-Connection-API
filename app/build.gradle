@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.hm.myapplication2"
+        minSdkVersion 21
+        targetSdkVersion 29
+        flavorDimensions "default"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        develop {
+
+            applicationIdSuffix ".dev"
+            versionCode 2
+            versionName "1.0.1"
+
+            resValue "string", 'app_name', 'Nearby Dev'
+
+            buildConfigField 'String', 'APP_NAME', '"Nearby Dev"'
+            buildConfigField 'boolean', 'IS_LIVE', "false"
+
+            manifestPlaceholders = [applicationname: "Nearby Dev"]
+            signingConfig signingConfigs.debug
+            //signingConfig signingConfigs.release
+        }
+    }
+
+    buildFeatures{
+        dataBinding = true
+        // for view binding :
+        // viewBinding = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0-rc02'
+    implementation 'com.google.android.material:material:1.1.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //near by messaging api
+    implementation 'com.google.android.gms:play-services-nearby:17.0.0'
+
+}
